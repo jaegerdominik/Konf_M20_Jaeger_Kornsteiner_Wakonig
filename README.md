@@ -1,20 +1,11 @@
 # Software Configuration Management #
+##Konf_M20_Jaeger_Kornsteiner_Wakonig##
+Creators: Jäger Dominik, Kornsteiner Lion, Wakonig Gregor
 
-## Drinks Sample ###
+## Classes ##
+- Cocktail.java
 
-This Example will include a simple project to think about following topics:
-
-- use project structures
-- use packages
-- use first time git
-
-just try out first technologies and knowledge about the course configuration management. We will cover additional topics in this course with e.g. this first examples and other examples too. 
-
-**Recommendation**: Try to work continuously with this first simple example.
-
-## Requirements
-
-currently tested with
-
-- open project directory with IntelliJ
-- with JDK 13
+## Steps with Git ##
+- Step1: Create Git-Repository
+- Step2: Push Drink-Smaple to Git
+- Step2.5: Clone/Pull the Repository to all Team-Members

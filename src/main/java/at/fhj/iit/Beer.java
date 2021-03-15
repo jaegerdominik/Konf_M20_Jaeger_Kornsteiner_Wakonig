@@ -1,3 +1,10 @@
+/*
+ * Class: 	        Beer Class
+ * Description:     Class wich extends Drink and represents a Beer
+ * Author: 		    Dominik Jäger
+ * Last Change: 	15.03.2021
+ */
+
 package at.fhj.iit;
 
 public class Beer extends Drink {
@@ -23,25 +30,48 @@ public class Beer extends Drink {
 
     }
 
+    /**
+     * Calculates and returns volume of drink
+     *
+     * @return the volume of drink in liter
+     */
     @Override
     public double getVolume() {
         return volume;
     }
 
+    /**
+     * Calculates and returns the alcohol percentage
+     *
+     * @return alcohol volume percent (e.g. 50)
+     */
     @Override
     public double getAlcoholPercent() {
         return alcoholPercentage;
     }
 
+    /**
+     * Gives information if drink is alcoholic or not
+     *
+     * @return true when alcoholic liquids are present, otherwise false
+     */
     @Override
     public boolean isAlcoholic() {
         return alcoholPercentage > 0 ? true : false;
     }
 
+    /**
+     * Gives information about the beer type
+     *
+     * @return the type of the beer
+     */
     public BeerType getType() {
         return type;
     }
 
+    /**
+     * Prints information about the name, type, volume and alcohol percentage of the beer
+     */
     public void printBeer() {
         System.out.println("+++" + name + "+++");
         System.out.println("Type: " + type);

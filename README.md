@@ -1,9 +1,11 @@
 # Software Configuration Management #
-##Konf_M20_Jaeger_Kornsteiner_Wakonig##
+## Konf_M20_Jaeger_Kornsteiner_Wakonig ##
 Creators: Jäger Dominik, Kornsteiner Lion, Wakonig Gregor
 
 ## Classes ##
 - Cocktail.java
+- Beer.java
+- BeerType.java
 
 ## Steps with Git ##
 - Step1: Create Git-Repository

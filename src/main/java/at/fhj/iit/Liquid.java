@@ -19,6 +19,12 @@ public class Liquid {
     private double alcoholPercent;
 
     /**
+     * temperature of liquid (in degrees)
+     */
+    private double temperature;
+
+
+    /**
      * Creates new liquid with given name, volume and
      * alcoholPercent
      *
@@ -32,6 +38,23 @@ public class Liquid {
 
         this.volume = volume;
         this.alcoholPercent = alcoholPercent;
+    }
+
+    /**
+     * Creates new liquid with given name, volume and
+     * alcoholPercent
+     *
+     * @param name name of liquid
+     * @param volume volume of liquid
+     * @param alcoholPercent of liquid
+     * @param temperature temperature of liquid
+     */
+    public Liquid(String name, double volume, double alcoholPercent, double temperature) {
+        this.name = name;
+        checkVolume(volume);
+        this.volume = volume;
+        this.alcoholPercent = alcoholPercent;
+        this.temperature = temperature;
     }
 
     private void checkVolume(double volume) {
@@ -92,5 +115,22 @@ public class Liquid {
      */
     public void setAlcoholPercent(double alcoholPercent) {
         this.alcoholPercent = alcoholPercent;
+    }
+
+    /**
+     * Getter for temperature
+     *
+     * @return temperature
+     */
+    public double getTemperature() {
+        return temperature;
+    }
+    /**
+     * Setter for temperature
+     *
+     * @param temperature new temperature
+     */
+    public void setTemperature(double temperature) {
+        this.temperature = temperature;
     }
 }

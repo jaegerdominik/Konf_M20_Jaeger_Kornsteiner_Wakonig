@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Cocktail extends Drink{
-    private List<Liquid> ingredients = new ArrayList<Liquid>();
+    protected List<Liquid> ingredients = new ArrayList<Liquid>();
 
     /**
      * Creates a Cocktail object with given name, e.g. Pina Colada, and some ingredients

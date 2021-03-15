@@ -23,5 +23,15 @@ public class Main {
         Beer guinness = new Beer("Guinness 0.0", BeerType.STOUT_BEER, 0, 0.44f);
         ottakringer.printBeer();
         guinness.printBeer();
+
+        Liquid milk = new Liquid("Milk", 0.6, 0.0D, 80.0D);
+        Liquid drambuie = new Liquid("Drambuie", 0.12, 40.0D, 20.0D);
+
+        HotDrink hotCocoa = new HotDrink("Hot Cocoa", milk, drambuie);
+
+        hotCocoa.calculateTemperature();
+        hotCocoa.printHotDrink();
+
+
     }
 }

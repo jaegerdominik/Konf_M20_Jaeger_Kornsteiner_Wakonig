@@ -4,7 +4,7 @@ Creators: Jäger Dominik, Kornsteiner Lion, Wakonig Gregor
 
 ## Classes ##
 - Cocktail.java
-- HotDrinks.java
+- HotDrink.java
 - Beer.java
 - BeerType.java
 

@@ -10,5 +10,13 @@ public class Main {
 
         Drink d = new SimpleDrink("Rotwein",l);
         System.out.println(d);
+
+        Liquid whiteRum = new Liquid("White Rum", 0.06, 37.5);
+        Liquid pineappleJuice = new Liquid("Pineapple juice", 0.1, 0);
+        Liquid creamOfCoconut = new Liquid("Cream of Coconut", 0.04, 0);
+        Liquid whippedCream = new Liquid("Whipped cream", 0.02, 0);
+
+        Cocktail pinaColada = new Cocktail("Pina Colada", whiteRum, pineappleJuice, creamOfCoconut, whippedCream);
+        pinaColada.printCocktail();
     }
 }

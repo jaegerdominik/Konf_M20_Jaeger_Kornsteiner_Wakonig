@@ -23,6 +23,13 @@ Creators: Jäger Dominik, Kornsteiner Lion, Wakonig Gregor
 - Step9.1: tell other Team Members to git pull
 - Step10: repeat Step4 - Step9.1
 
+## Issues ##
+-- We ran into issues with our push-/ pull workflow.
+	Several times we had to merge our branches. 
+	We believe that this was caused by us working on the same file simultaneously.
+	Perhaps we caused it by not cleanly pulling our repositories before making changes.
+	After we started to be mindful of this problem we ceased to have said issues.
+
 ## Used sources ##
 - https://www.makeareadme.com/
 - https://documentation.divio.com/

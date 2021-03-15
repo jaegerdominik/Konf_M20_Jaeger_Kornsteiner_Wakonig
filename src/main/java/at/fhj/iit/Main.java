@@ -18,5 +18,10 @@ public class Main {
 
         Cocktail pinaColada = new Cocktail("Pina Colada", whiteRum, pineappleJuice, creamOfCoconut, whippedCream);
         pinaColada.printCocktail();
+
+        Beer ottakringer = new Beer("Ottakringer", BeerType.BLONDE_BEER, 5.2f, 0.5f);
+        Beer guinness = new Beer("Guinness 0.0", BeerType.STOUT_BEER, 0, 0.44f);
+        ottakringer.printBeer();
+        guinness.printBeer();
     }
 }

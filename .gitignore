@@ -1,3 +1,5 @@
 *.Class
 *.Log
 *.Tmp
+.idea/
+*.iml

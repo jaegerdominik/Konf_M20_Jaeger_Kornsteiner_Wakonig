@@ -6,8 +6,9 @@ import java.util.List;
 /**
  * Class:           Cocktails Class
  * Description:     Class wich extends Drink and represents a Cocktail Recipe
- * Author:          Lion Kornsteiner
  * Last Change:     24.04.2021
+ * @Author          Lion Kornsteiner
+ * @Version         1.0
  */
 public class Cocktail extends Drink{
     protected List<Liquid> ingredients = new ArrayList<Liquid>();

@@ -1,49 +1,55 @@
 package at.fhj.iit;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Nested;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class CocktailTest {
     private Cocktail cocktail;
-    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-    private final PrintStream originalOut = System.out;
+    private static final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    private static final PrintStream originalOut = System.out;
+
+    @BeforeAll
+    public static void beforeAll() {
+        System.setOut(new PrintStream(outContent));
+    }
 
     @BeforeEach
     void setup() {
         Liquid water = new Liquid("Water", 1, 0);
         cocktail = new Cocktail("Glass of Water", water);
+    }
 
-        System.setOut(new PrintStream(outContent));
+    @AfterAll
+    public static void afterAll() {
+        System.setOut(originalOut);
     }
 
     @Test
-    @DisplayName("testIsAlcoholicFalse")
-    public void testIsAlcoholicFalse() {
-        assertEquals(cocktail.isAlcoholic(), false);
+    @DisplayName("test if IsAlcoholic is False")
+    public void testIsAlcoholic() {
+        assertFalse(cocktail.isAlcoholic());
     }
 
     @Test
-    @DisplayName("testGetVolume")
+    @DisplayName("test GetVolume")
     public void testGetVolume() {
         assertEquals(1, cocktail.getVolume());
     }
 
     @Test
-    @DisplayName("testGetAlcoholPercent")
+    @DisplayName("test GetAlcoholPercent")
     public void testGetAlcoholPercent() {
         assertEquals(0, cocktail.getAlcoholPercent());
     }
 
+    //Class CocktailTest_2 for Tests with diffrent setup
     @Nested
-    class CocktailTestWithPinaColadaCocktail {
+    @DisplayName("Cocktail Test With Pina Colada Cocktail")
+    class CocktailTest_2 {
 
         @BeforeEach
         void setup() {
@@ -56,25 +62,25 @@ public class CocktailTest {
         }
 
         @Test
-        @DisplayName("testGetVolume")
+        @DisplayName("test GetVolume")
         public void testGetVolume() {
             assertEquals(0.22, cocktail.getVolume());
         }
 
         @Test
-        @DisplayName("testGetAlcoholPercent")
+        @DisplayName("test GetAlcoholPercent")
         public void testGetAlcoholPercent() {
             assertEquals(10.23, cocktail.getAlcoholPercent());
         }
 
         @Test
-        @DisplayName("testIsAlcoholicTrue")
-        public void testIsAlcoholicTrue() {
+        @DisplayName("test if IsAlcoholic is True")
+        public void testIsAlcoholic() {
             assertTrue(cocktail.isAlcoholic());
         }
 
         @Test
-        @DisplayName("testAddIngredient")
+        @DisplayName("test AddIngredient")
         public void testAddIngredient() {
             Liquid water = new Liquid("Water", 1, 0);
             cocktail.addIngredient(water);
@@ -82,7 +88,7 @@ public class CocktailTest {
         }
 
         @Test
-        @DisplayName("testPrintCocktail")
+        @DisplayName("test PrintCocktail")
         public void testPrintCocktail() {
             cocktail.printCocktail();
             assertEquals(

@@ -66,6 +66,16 @@ public class Cocktail extends Drink{
     }
 
     /**
+     * Sets the alcohol percentage
+     *
+     * @param alcoholPercentage of the drink
+     */
+    @Override
+    public void setAlcoholPercentage(float alcoholPercentage) {
+
+    }
+
+    /**
      * Gives information if drink is alcoholic or not
      *
      * @return true when alcoholic liquids are present, otherwise false

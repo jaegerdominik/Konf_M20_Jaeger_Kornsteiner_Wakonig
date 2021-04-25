@@ -1,8 +1,11 @@
 package at.fhj.iit;
 
+import java.util.Locale;
+
 public class Main {
 
     public static void main(String[] args){
+        Locale.setDefault(new Locale("en", "US"));
 
         Liquid l = new Liquid("Wein", 0.125, 13);
         System.out.println(l.getName());

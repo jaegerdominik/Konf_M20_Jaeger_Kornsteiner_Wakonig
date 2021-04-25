@@ -51,6 +51,38 @@ Step 8: Push the merge to the remote repository
 
 #### Test coverage ####
 
+The Classes HotDrink.java, Cocktail.java and Beer.java have all been tested with 100% coverage of methods and lines.
+That being said, a real 100% coverage for tests can not be achieved, only a number of tests that we, as developers, think of are implemented.
+The tests need to be added on; For now a simple set of test to compare the output of the methods has been added.
+In following updates to the program we will need to add functionality to overflows, errors, events like power outages and so forth, as well as add more detail to the tests that we have already implemented.
+
+#### JavaDoc Crashcourse ####
+
+JavaDoc is a writing standard for documentation of code in java. It helps to standardise how people write their code. It helps to keep an overview of your own code aswell as to read and understand code that others have written. 
+Many IDEs also integrate support for JavaDoc, e.a. IntelliJ lets you hover your mouse over called method names and other things and shows the JavaDoc of that segment in a tooltip.
+A typical JavaDoc comment would look like this:
+ 
+ 	`/**
+     * Creates a drink object with given name, e.g. juice or orange juice
+     *
+     * @param name        	name of the drink
+     * @param ingredients 	list of liquids
+     */
+     public HotDrink(String name, Liquid... ingredients){...}`
+
+This is a method header that shows after @param which parameter the method needs. 
+
+Other tags, as described in https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html are:
+
+@author (classes and interfaces only, required)
+@version (classes and interfaces only, required. See footnote 1)
+@param (methods and constructors only)
+@return (methods only)
+@exception (@throws is a synonym added in Javadoc 1.2)
+@see
+@since
+@serial (or @serialField or @serialData)
+@deprecated (see How and When To Deprecate APIs)
 
 
 
@@ -72,6 +104,8 @@ Step 8: Push the merge to the remote repository
 
 ## Repository Link ##
 https://github.com/jaegerdominik/Konf_M20_Jaeger_Kornsteiner_Wakonig
+
+
 
 
 

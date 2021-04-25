@@ -9,7 +9,7 @@ package at.fhj.iit;
 
 
 public class HotDrink extends Cocktail{
-    private double temperature = 0.0D;
+
     /**
      * Creates a drink object with given name, e.g. juice or orange juice
      *
@@ -19,36 +19,41 @@ public class HotDrink extends Cocktail{
     public HotDrink(String name, Liquid... ingredients) {
         super(name, ingredients);
     }
+    private double temperature = 0.0D;
 
     // Method to calculate the temperature of the liquids that are mixed together
-    public void calculateTemperature() {
+    public String calculateTemperature() {
+        String returnString = "";
         float divisor = 0;
         float dividend = 0;
 
-        for (Liquid liquid : ingredients)
-        {
-            divisor += (liquid.getTemperature() * liquid.getVolume());
-            dividend += (liquid.getVolume());
+
+        try {
+            for (Liquid liquid : ingredients)
+            {
+                divisor += (liquid.getTemperature() * liquid.getVolume());
+                dividend += (liquid.getVolume());
+            }
+            if (dividend > 0 && divisor > 0){
+                this.temperature = divisor/dividend;
+                returnString = String.format("%s temperature: %.2f degree Celsius", name, temperature);
+            }
+        }catch  (NullPointerException e){
+            returnString = String.format("Specify all parameters of the liquids to see the temperature!");
         }
-        if (dividend > 0 && divisor > 0){
-            this.temperature = divisor/dividend;
-            System.out.printf("%s temperature: %.2f degree Celsius", name, temperature);
-        }
-        else {
-            System.out.println("Specify all parameters of the liquids to see the temperature!");
-        }
+        return returnString;
     }
 
     public void printHotDrink() {
-        System.out.printf("\n----%s----", name);
-        System.out.println("\nIt's soo good!");
-        System.out.println("Contains the following liquids:");
+        System.out.printf("----%s----\n", name);
+        System.out.printf("It's soo good!\n");
+        System.out.printf("Contains the following liquids:\n");
         for (Liquid liquid : ingredients)
         {
             System.out.printf("%.3f liters of %s at %.0f degree Celsius\n", liquid.getVolume(),liquid.getName(), liquid.getTemperature());
         }
 
-        System.out.printf("Temperature: %.1f degree Celsius", temperature);
+        System.out.printf("Temperature: %.1f degree Celsius\n", temperature);
     }
 }
 

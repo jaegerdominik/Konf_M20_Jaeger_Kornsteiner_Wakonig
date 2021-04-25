@@ -15,7 +15,7 @@ public class Cocktail extends Drink{
     protected List<Liquid> ingredients = new ArrayList<Liquid>();
 
     /**
-     * Creates a Cocktail object with given name, e.g. Pina Colada, and some ingredients
+     * Creates a Cocktail object with 1given name, e.g. Pina Colada, and some ingredients
      *
      * @param name name of the drink
      * @param ingredients ingredients to add to the Cocktail (of type Liquid)

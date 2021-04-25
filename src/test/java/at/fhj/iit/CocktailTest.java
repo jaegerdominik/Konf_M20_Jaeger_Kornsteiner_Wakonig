@@ -29,19 +29,19 @@ public class CocktailTest {
     }
 
     @Test
-    @DisplayName("test if IsAlcoholic is False")
+    @DisplayName("test if isAlcoholic is False")
     public void testIsAlcoholic() {
         assertFalse(cocktail.isAlcoholic());
     }
 
     @Test
-    @DisplayName("test GetVolume")
+    @DisplayName("test getVolume")
     public void testGetVolume() {
         assertEquals(1, cocktail.getVolume());
     }
 
     @Test
-    @DisplayName("test GetAlcoholPercent")
+    @DisplayName("test getAlcoholPercent")
     public void testGetAlcoholPercent() {
         assertEquals(0, cocktail.getAlcoholPercent());
     }
@@ -62,25 +62,25 @@ public class CocktailTest {
         }
 
         @Test
-        @DisplayName("test GetVolume")
+        @DisplayName("test getVolume")
         public void testGetVolume() {
             assertEquals(0.22, cocktail.getVolume());
         }
 
         @Test
-        @DisplayName("test GetAlcoholPercent")
+        @DisplayName("test getAlcoholPercent")
         public void testGetAlcoholPercent() {
             assertEquals(10.23, cocktail.getAlcoholPercent());
         }
 
         @Test
-        @DisplayName("test if IsAlcoholic is True")
+        @DisplayName("test if isAlcoholic is True")
         public void testIsAlcoholic() {
             assertTrue(cocktail.isAlcoholic());
         }
 
         @Test
-        @DisplayName("test AddIngredient")
+        @DisplayName("test addIngredient")
         public void testAddIngredient() {
             Liquid water = new Liquid("Water", 1, 0);
             cocktail.addIngredient(water);
@@ -88,7 +88,7 @@ public class CocktailTest {
         }
 
         @Test
-        @DisplayName("test PrintCocktail")
+        @DisplayName("test printCocktail")
         public void testPrintCocktail() {
             cocktail.printCocktail();
             assertEquals(

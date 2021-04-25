@@ -10,18 +10,24 @@ package at.fhj.iit;
 
 public class HotDrink extends Cocktail{
 
+    private double temperature = 0.0D;
+
     /**
      * Creates a drink object with given name, e.g. juice or orange juice
      *
      * @param name        name of the drink
-     * @param ingredients
+     * @param ingredients list of liquids
      */
     public HotDrink(String name, Liquid... ingredients) {
         super(name, ingredients);
     }
-    private double temperature = 0.0D;
 
-    // Method to calculate the temperature of the liquids that are mixed together
+
+    /**
+     * Method to calculate the temperature of the liquids that are mixed together
+     *
+     * @return A string that gives information about the Temperature
+     */
     public String calculateTemperature() {
         String returnString = "";
         float divisor = 0;
@@ -44,6 +50,10 @@ public class HotDrink extends Cocktail{
         return returnString;
     }
 
+
+    /**
+     * Method to output the Text for the Hotdrink.
+     */
     public void printHotDrink() {
         System.out.printf("----%s----\n", name);
         System.out.printf("It's soo good!\n");

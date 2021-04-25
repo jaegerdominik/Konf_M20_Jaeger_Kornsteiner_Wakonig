@@ -55,7 +55,6 @@ public class Beer extends Drink {
      *
      * @param alcoholPercentage of the beer
      */
-    @Override
     public void setAlcoholPercentage(float alcoholPercentage) {
         this.alcoholPercentage = alcoholPercentage;
     }

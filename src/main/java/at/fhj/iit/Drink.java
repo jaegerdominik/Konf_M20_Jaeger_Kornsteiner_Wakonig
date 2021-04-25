@@ -35,10 +35,6 @@ public abstract class Drink {
      */
     public abstract double getAlcoholPercent();
 
-    /**
-     * Sets the alcohol percentage
-     */
-    public abstract void setAlcoholPercentage(float alcoholPercentage);
 
     /**
      * Gives information if drink is alcoholic or not

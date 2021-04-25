@@ -41,11 +41,6 @@ public class SimpleDrink extends Drink{
         return l.getAlcoholPercent();
     }
 
-    @Override
-    public void setAlcoholPercentage(float alcoholPercentage) {
-        l.setAlcoholPercent(alcoholPercentage);
-    }
-
     /**
      * Gives information if drink is alcoholic or not
      *

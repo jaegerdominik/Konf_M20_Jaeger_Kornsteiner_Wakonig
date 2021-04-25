@@ -1,28 +1,28 @@
-/*
- * Class: 	        Cocktails Class
- * Description:     Class wich extends Drink and represents a Cocktail Recipe
- * Author: 		    Lion Kornsteiner
- * Last Change: 	11.03.2021
- */
-
 package at.fhj.iit;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Class:           Cocktails Class
+ * Description:     Class wich extends Drink and represents a Cocktail Recipe
+ * Author:          Lion Kornsteiner
+ * Last Change:     24.04.2021
+ */
 public class Cocktail extends Drink{
     protected List<Liquid> ingredients = new ArrayList<Liquid>();
 
     /**
-     * Creates a Cocktail object with 1given name, e.g. Pina Colada, and some ingredients
+     * Creates a Cocktail object with given name, e.g. Pina Colada, and some ingredients (consisting of type Liquids)
      *
      * @param name name of the drink
      * @param ingredients ingredients to add to the Cocktail (of type Liquid)
      */
     public Cocktail(String name, Liquid... ingredients) {
         super(name);
-        this.ingredients = Arrays.asList(ingredients.clone());
+        for (Liquid ingredient:ingredients) {
+            addIngredient(ingredient);
+        }
     }
 
 
@@ -53,7 +53,7 @@ public class Cocktail extends Drink{
     /**
      * Returns alcohol volume percent of liquid l
      *
-     * @return alcohol volume percent
+     * @return alcohol volume in percent(eg.:40%)
      */
     @Override
     public double getAlcoholPercent() {
@@ -62,7 +62,7 @@ public class Cocktail extends Drink{
         {
             alcoholPercentage += liquid.getVolume() * (liquid.getAlcoholPercent() / 100.0);
         }
-        return alcoholPercentage / getVolume() * 100;
+        return Math.round((alcoholPercentage / getVolume() * 100)*100)/100.0d;
     }
 
     /**
@@ -83,12 +83,12 @@ public class Cocktail extends Drink{
     }
 
     /**
-     * Prints some details about the Cocktail
+     * Prints the details about the Cocktail
      */
     public void printCocktail() {
         System.out.println("+++"+ name +"+++");
         System.out.println("Volume: " + getVolume() + " liter");
-        System.out.printf("Alcohol Percentage: %.2f%%\n" ,getAlcoholPercent());
+        System.out.println("Alcohol Percentage: "+ getAlcoholPercent() +"%");
         System.out.println("Is Alcoholic: " + (isAlcoholic()?"Yes":"No"));
     }
 }

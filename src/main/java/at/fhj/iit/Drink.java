@@ -35,6 +35,7 @@ public abstract class Drink {
      */
     public abstract double getAlcoholPercent();
 
+
     /**
      * Gives information if drink is alcoholic or not
      *

@@ -51,6 +51,15 @@ public class Beer extends Drink {
     }
 
     /**
+     * Sets the alcohol percentage
+     *
+     * @param alcoholPercentage of the beer
+     */
+    public void setAlcoholPercentage(float alcoholPercentage) {
+        this.alcoholPercentage = alcoholPercentage;
+    }
+
+    /**
      * Gives information if drink is alcoholic or not
      *
      * @return true when alcoholic liquids are present, otherwise false

@@ -39,15 +39,15 @@ Creators: Jäger Dominik, Kornsteiner Lion, Wakonig Gregor
 
 ### Task two ###
 
-Step 1: Create a new branch e.g. Classname_JUnit
-Step 2: Checkout into the new branch
-Step 3: Create tests for each class
-Step 3.5: In the process of Step 3, sometimes other classes need to be adjusted
-Step 4: Add JavaDoc comments if not already done
-Step 5: Add the modified files to git, then commit and push the changes
-Step 6: Checkout into the main branch
-Step 7: Merge the main branch with Classname_JUnit branch
-Step 8: Push the merge to the remote repository 
+- Step 1: Create a new branch e.g. Classname_JUnit
+- Step 2: Checkout into the new branch
+- Step 3: Create tests for each class
+- Step 3.5: In the process of Step 3, sometimes other classes need to be adjusted
+- Step 4: Add JavaDoc comments if not already done
+- Step 5: Add the modified files to git, then commit and push the changes
+- Step 6: Checkout into the main branch
+- Step 7: Merge the main branch with Classname_JUnit branch
+- Step 8: Push the merge to the remote repository 
 
 #### Test coverage ####
 
@@ -55,6 +55,26 @@ The Classes HotDrink.java, Cocktail.java and Beer.java have all been tested with
 That being said, a real 100% coverage for tests can not be achieved, only a number of tests that we, as developers, think of are implemented.
 The tests need to be added on; For now a simple set of test to compare the output of the methods has been added.
 In following updates to the program we will need to add functionality to overflows, errors, events like power outages and so forth, as well as add more detail to the tests that we have already implemented.
+
+
+### Task three ###
+
+- Step 1: Create New Branch for the implementation of Registrierkasse.java - we left the Name Registrierkasse as seen and clearly **instructed in the requirements** sheet in order to not interfere with testcases; as opposed to calling it CashRegister to be conform with English naming conventions.
+- Step 2: Checkout into the newly created branch
+- Step 3: Created the classes Registrierkasse.java, CASH_REGISTER_CLASS.java and CashRegisterDrink.java.
+     Registrierkasse.java is the ...... TODO
+     CASH_REGISTER_CLASS is an Enum that describes the type of drink
+     CashRegisterDrink.java is the interface ......TODO
+
+
+- Step x: Writing Java Doc comments in all the newly implemented classes and thoroughly describe all newly implemented functionality.
+- Step x: Writing thourough documentation in our README.md of what and how we implemented things in order to let us remember what we did and let other people understand what we did by reading our documentation. The README.md of this project should be fit to be used by other students as a resource to learn the concepts of configuration management in a self-study mode. The README.md was written following guidelines that are outlined on *https://www.makeareadme.com/*
+
+
+
+
+#### Issues ####
+
 
 #### JavaDoc Crashcourse ####
 
@@ -87,6 +107,9 @@ Other tags, as described in https://www.oracle.com/technical-resources/articles/
 
 
 ## Used sources ##
+
+- https://www.makeareadme.com/
+- https://chris.beams.io/posts/git-commit/#seven-rules
 
 ### Task one ###
 

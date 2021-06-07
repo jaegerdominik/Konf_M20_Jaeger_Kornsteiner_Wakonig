@@ -1,15 +1,14 @@
-/*
- * Class: 	 HotDrink
- * Description:  Class wich extends Drink and represents a Hot Drink recipe
- * Author: 		Gregor Wakonig
- * Last Change: 	07.06.2021
- */
-
 package at.fhj.iit;
 
 
 import java.util.Date;
 
+/**
+ * Class: 	 HotDrink
+ * Description:  Class wich extends Drink and represents a Hot Drink recipe
+ * Author: 		Gregor Wakonig
+ * Last Change: 	07.06.2021
+ */
 public class HotDrink extends Cocktail{
 
     private double temperature = 0.0D;

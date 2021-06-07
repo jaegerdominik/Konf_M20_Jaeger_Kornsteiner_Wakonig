@@ -1,14 +1,13 @@
-/*
+package at.fhj.iit;
+
+import java.util.Date;
+
+/**
  * Class: 	        Beer Class
  * Description:     Class wich extends Drink and represents a Beer
  * Author: 		    Dominik Jäger
  * Last Change: 	07.06.2021
  */
-
-package at.fhj.iit;
-
-import java.util.Date;
-
 public class Beer extends Drink {
 
     private BeerType type;

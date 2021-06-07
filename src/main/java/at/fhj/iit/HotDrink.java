@@ -70,11 +70,19 @@ public class HotDrink extends Cocktail{
         System.out.printf("Temperature: %.1f degree Celsius\n", temperature);
     }
 
+    /**
+     * Overrides the return function
+     * @return
+     */
     @Override
     public Date getDate() {
         return date;
     }
 
+    /**
+     * Overrides the getPrice function
+     * @return
+     */
     @Override
     public double getPrice() {
         double price = 0;
@@ -84,6 +92,10 @@ public class HotDrink extends Cocktail{
         return Math.round(price*100)/100d;
     }
 
+    /**
+     * Overrides the getSellerName function
+     * @return
+     */
     @Override
     public String getSellerName() {
         return super.getSellerName();

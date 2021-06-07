@@ -62,18 +62,16 @@ In following updates to the program we will need to add functionality to overflo
 - Step 1: Create New Branch for the implementation of Registrierkasse.java - we left the Name Registrierkasse as seen and clearly **instructed in the requirements** sheet in order to not interfere with testcases; as opposed to calling it CashRegister to be conform with English naming conventions.
 - Step 2: Checkout into the newly created branch
 - Step 3: Created the classes Registrierkasse.java, CASH_REGISTER_CLASS.java and CashRegisterDrink.java.
-     Registrierkasse.java is the ...... TODO
+     Registrierkasse.java contains methods to calculate sales.
      CASH_REGISTER_CLASS is an Enum that describes the type of drink
-     CashRegisterDrink.java is the interface ......TODO
+     CashRegisterDrink.java is the interface
+     For Information on these classes refer to DESIGNDECISIONS.md.
+- Step 4: Write the site.xml in src/site to add files to the maven site
+- Step 5: Create the Files for mvn site in the folder src/site/markdown: DESIGNDECISION.md, TESTABDECKUNG.md, TUTORIAL.md. As specified in the POM.xml, the 
+README.md is copied to this folder from the root folder on executing mvn site.
+- Step 6: Writing Java Doc comments in all the newly implemented classes and thoroughly describe all newly implemented functionality.
+- Step 7: Writing thourough documentation in our README.md, TESTABDECKUNG.md and DESIGNDECISION.md of what and how we implemented things in order to let us remember what we did and let other people understand what we did by reading our documentation. The documentation of this project should be fit to be used by other students as a resource to learn the concepts of configuration management in a self-study mode. The README.md was written following guidelines that are outlined on *https://www.makeareadme.com/*
 
-
-- Step x: Writing Java Doc comments in all the newly implemented classes and thoroughly describe all newly implemented functionality.
-- Step x: Writing thourough documentation in our README.md of what and how we implemented things in order to let us remember what we did and let other people understand what we did by reading our documentation. The README.md of this project should be fit to be used by other students as a resource to learn the concepts of configuration management in a self-study mode. The README.md was written following guidelines that are outlined on *https://www.makeareadme.com/*
-
-
-
-
-#### Issues ####
 
 
 #### JavaDoc Crashcourse ####

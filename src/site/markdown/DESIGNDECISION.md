@@ -1,1 +1,3 @@
-### ;kj ###
+# Designdecision #
+
+We have created an interface with the methods that the interface required as seen in the instruction sheet. An Enum was created because it allowed us to very easily allowed us to distinguish between anti-alcoholic, lightly alcoholic and heavily alcoholic drinks. That was required for our cash register to keep count of how many of each type of drink are sold. All the methods to deal with this are in the Registrierkasse.java. 

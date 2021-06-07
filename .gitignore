@@ -10,3 +10,4 @@ target/
 *.log
 *.class
 *.exe
+src/site/markdown/README.md

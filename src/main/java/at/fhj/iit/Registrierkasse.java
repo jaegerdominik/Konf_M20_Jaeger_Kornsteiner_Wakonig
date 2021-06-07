@@ -75,15 +75,18 @@ public class Registrierkasse {
         return Math.round(price*100)/100d;
     }
 
-    //---Getter and Setter---
+    /**
+     * returns a List of sales
+     * @return List of sale
+     */
     public List<Drink> getSales() {
         return sales;
     }
 
-    public void setSales(List<Drink> sales) {
-        this.sales = sales;
-    }
-
+    /**
+     * adds a drink to sales
+     * @param drink drink to add to sales
+     */
     public void addDrink(Drink drink) {
         sales.add(drink);
     }

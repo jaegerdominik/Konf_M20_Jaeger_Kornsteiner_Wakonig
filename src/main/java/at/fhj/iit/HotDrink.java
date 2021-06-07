@@ -2,7 +2,7 @@
  * Class: 	 HotDrink
  * Description:  Class wich extends Drink and represents a Hot Drink recipe
  * Author: 		Gregor Wakonig
- * Last Change: 	15.03.2021
+ * Last Change: 	07.06.2021
  */
 
 package at.fhj.iit;

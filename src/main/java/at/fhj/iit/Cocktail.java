@@ -7,20 +7,21 @@ import java.util.List;
 /**
  * Class:           Cocktails Class
  * Description:     Class wich extends Drink and represents a Cocktail Recipe
- * Last Change:     24.04.2021
+ * Last Change:     07.06.2021
  * @Author          Lion Kornsteiner
  * @Version         1.0
  */
 public class Cocktail extends Drink{
-    protected List<Liquid> ingredients = new ArrayList<Liquid>();
+   protected List<Liquid> ingredients = new ArrayList<Liquid>();
 
     private Date date;
     private String sellerName;
 
     /**
-     * Creates a Cocktail object with given name, e.g. Pina Colada, and some ingredients (consisting of type Liquids)
-     *
+     * Creates a Cocktail object with given name, e.g. Pina Colada, Date of sale, seller name and some ingredients (consisting of type Liquids)
      * @param name name of the drink
+     * @param date Date of sale
+     * @param sellerName seller name
      * @param ingredients ingredients to add to the Cocktail (of type Liquid)
      */
     public Cocktail(String name,Date date, String sellerName, Liquid... ingredients) {
@@ -99,11 +100,19 @@ public class Cocktail extends Drink{
         System.out.println("Is Alcoholic: " + (isAlcoholic()?"Yes":"No"));
     }
 
+    /**
+     * returns the date of sale
+     * @return date of sale
+     */
     @Override
     public Date getDate() {
         return date;
     }
 
+    /**
+     * returns the price of the cocktail
+     * @return price of the cocktail
+     */
     @Override
     public double getPrice() {
         double price = 0;
@@ -113,6 +122,10 @@ public class Cocktail extends Drink{
         return Math.round(price*100)/100d;
     }
 
+    /**
+     * returns the seller name
+     * @return
+     */
     @Override
     public String getSellerName() {
         return sellerName;

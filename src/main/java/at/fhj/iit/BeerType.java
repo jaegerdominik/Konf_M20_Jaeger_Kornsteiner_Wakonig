@@ -2,7 +2,7 @@
  * Class: 	        Beer Class
  * Description:     Class wich extends Drink and represents a Beer
  * Author: 		    Dominik Jäger
- * Last Change: 	15.03.2021
+ * Last Change: 	07.06.2021
  */
 
 package at.fhj.iit;

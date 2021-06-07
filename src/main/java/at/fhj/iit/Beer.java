@@ -7,11 +7,17 @@
 
 package at.fhj.iit;
 
+import java.util.Date;
+
 public class Beer extends Drink {
 
     private BeerType type;
     private float alcoholPercentage;
     private float volume;
+
+    private Date date;
+    private String sellerName;
+    private double price;
 
 
     /**
@@ -22,12 +28,14 @@ public class Beer extends Drink {
      * @param alcoholPercentage percentage of the beer
      * @param volume volume of the beer
      */
-    public Beer(String name, BeerType type, float alcoholPercentage, float volume) {
+    public Beer(String name, BeerType type, float alcoholPercentage, float volume, Date date, String sellerName, double price) {
         super(name);
         this.type = type;
         this.alcoholPercentage = alcoholPercentage;
         this.volume = volume;
-
+        this.date = date;
+        this.sellerName = sellerName;
+        this.price = price;
     }
 
     /**
@@ -87,5 +95,20 @@ public class Beer extends Drink {
         System.out.println("Volume: " + volume + " liter");
         System.out.printf("Alcohol Percentage: %.2f%%\n" ,alcoholPercentage);
         System.out.println("Is Alcoholic: " + (isAlcoholic()?"Yes":"No"));
+    }
+
+    @Override
+    public Date getDate() {
+        return date;
+    }
+
+    @Override
+    public double getPrice() {
+        return Math.round(price*100)/100d;
+    }
+
+    @Override
+    public String getSellerName() {
+        return sellerName;
     }
 }

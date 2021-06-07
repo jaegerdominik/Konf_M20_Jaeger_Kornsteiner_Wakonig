@@ -8,9 +8,13 @@
 package at.fhj.iit;
 
 
+import java.util.Date;
+
 public class HotDrink extends Cocktail{
 
     private double temperature = 0.0D;
+    private Date date;
+    private String sellerName;
 
     /**
      * Creates a drink object with given name, e.g. juice or orange juice
@@ -18,10 +22,10 @@ public class HotDrink extends Cocktail{
      * @param name        name of the drink
      * @param ingredients list of liquids
      */
-    public HotDrink(String name, Liquid... ingredients) {
-        super(name, ingredients);
+    public HotDrink(String name, Date date, String sellerName, Liquid... ingredients) {
+        super(name, date, sellerName, ingredients);
+        this.date = date;
     }
-
 
     /**
      * Method to calculate the temperature of the liquids that are mixed together
@@ -64,6 +68,25 @@ public class HotDrink extends Cocktail{
         }
 
         System.out.printf("Temperature: %.1f degree Celsius\n", temperature);
+    }
+
+    @Override
+    public Date getDate() {
+        return date;
+    }
+
+    @Override
+    public double getPrice() {
+        double price = 0;
+        for(Liquid liquid : ingredients) {
+            price += liquid.getPrice();
+        }
+        return Math.round(price*100)/100d;
+    }
+
+    @Override
+    public String getSellerName() {
+        return sellerName;
     }
 }
 

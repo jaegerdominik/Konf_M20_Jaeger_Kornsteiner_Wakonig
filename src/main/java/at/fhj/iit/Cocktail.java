@@ -1,6 +1,7 @@
 package at.fhj.iit;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -13,14 +14,19 @@ import java.util.List;
 public class Cocktail extends Drink{
     protected List<Liquid> ingredients = new ArrayList<Liquid>();
 
+    private Date date;
+    private String sellerName;
+
     /**
      * Creates a Cocktail object with given name, e.g. Pina Colada, and some ingredients (consisting of type Liquids)
      *
      * @param name name of the drink
      * @param ingredients ingredients to add to the Cocktail (of type Liquid)
      */
-    public Cocktail(String name, Liquid... ingredients) {
+    public Cocktail(String name,Date date, String sellerName, Liquid... ingredients) {
         super(name);
+        this.date = date;
+        this.sellerName = sellerName;
         for (Liquid ingredient:ingredients) {
             addIngredient(ingredient);
         }
@@ -91,5 +97,24 @@ public class Cocktail extends Drink{
         System.out.println("Volume: " + getVolume() + " liter");
         System.out.println("Alcohol Percentage: "+ getAlcoholPercent() +"%");
         System.out.println("Is Alcoholic: " + (isAlcoholic()?"Yes":"No"));
+    }
+
+    @Override
+    public Date getDate() {
+        return date;
+    }
+
+    @Override
+    public double getPrice() {
+        double price = 0;
+        for(Liquid liquid : ingredients) {
+            price += liquid.getPrice();
+        }
+        return Math.round(price*100)/100d;
+    }
+
+    @Override
+    public String getSellerName() {
+        return sellerName;
     }
 }

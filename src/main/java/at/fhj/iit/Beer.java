@@ -27,6 +27,9 @@ public class Beer extends Drink {
      * @param type type of beer
      * @param alcoholPercentage percentage of the beer
      * @param volume volume of the beer
+     * @param date date of production
+     * @param sellerName name of the seller
+     * @param price of the drink per l
      */
     public Beer(String name, BeerType type, float alcoholPercentage, float volume, Date date, String sellerName, double price) {
         super(name);
@@ -97,18 +100,31 @@ public class Beer extends Drink {
         System.out.println("Is Alcoholic: " + (isAlcoholic()?"Yes":"No"));
     }
 
+    /**
+     * Gives information about the date
+     * @return the date
+     */
     @Override
     public Date getDate() {
         return date;
     }
 
+    /**
+     * Gives information about the price of the beer
+     * @return the price
+     */
     @Override
     public double getPrice() {
         return Math.round(price*100)/100d;
     }
 
+    /**
+     * Gives information about the seller
+     * @return the sellerName
+     */
     @Override
     public String getSellerName() {
         return sellerName;
     }
+
 }

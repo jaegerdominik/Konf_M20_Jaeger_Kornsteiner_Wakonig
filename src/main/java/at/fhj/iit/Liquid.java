@@ -28,40 +28,6 @@ public class Liquid {
      */
     private double pricePerLiter;
 
-
-/*    *//**
-     * Creates new liquid with given name, volume and
-     * alcoholPercent
-     *
-     * @param name name of liquid
-     * @param volume volume of liquid
-     * @param alcoholPercent of liquid
-     *//*
-    public Liquid(String name, double volume, double alcoholPercent) {
-        this.name = name;
-        checkVolume(volume);
-
-        this.volume = volume;
-        this.alcoholPercent = alcoholPercent;
-    }*/
-
-/*    *//**
-     * Creates new liquid with given name, volume and
-     * alcoholPercent
-     *
-     * @param name name of liquid
-     * @param volume volume of liquid
-     * @param alcoholPercent of liquid
-     * @param temperature temperature of liquid
-     *//*
-    public Liquid(String name, double volume, double alcoholPercent, double temperature) {
-        this.name = name;
-        checkVolume(volume);
-        this.volume = volume;
-        this.alcoholPercent = alcoholPercent;
-        this.temperature = temperature;
-    }*/
-
     /**
      * Creates new liquid with given name, volume and
      * alcoholPercent
@@ -97,9 +63,7 @@ public class Liquid {
         this.pricePerLiter = pricePerLiter;
     }
 
-
-
-    private void checkVolume(double volume) {
+    public void checkVolume(double volume) {
         if (volume <= 0) {
             throw new IllegalArgumentException("liquid " + name + " must have a volume > 0");
         }

@@ -14,7 +14,7 @@ public class HotDrink extends Cocktail{
 
     private double temperature = 0.0D;
     private Date date;
-    private String sellerName;
+
 
     /**
      * Creates a drink object with given name, e.g. juice or orange juice
@@ -86,7 +86,7 @@ public class HotDrink extends Cocktail{
 
     @Override
     public String getSellerName() {
-        return sellerName;
+        return super.getSellerName();
     }
 }
 

@@ -4,6 +4,8 @@ import org.junit.jupiter.api.*;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -19,8 +21,12 @@ public class CocktailTest {
 
     @BeforeEach
     void setup() {
-        Liquid water = new Liquid("Water", 1, 0);
-        cocktail = new Cocktail("Glass of Water", water);
+        Liquid water = new Liquid("Water", 1, 0, 20, 1.2);
+        try {
+            cocktail = new Cocktail("Glass of Water",new SimpleDateFormat("dd-MM-YYYY").parse("12-12-2001"), "Peter", water);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
     }
 
     @AfterAll
@@ -46,19 +52,23 @@ public class CocktailTest {
         assertEquals(0, cocktail.getAlcoholPercent());
     }
 
-    //Class CocktailTest_2 for Tests with diffrent setup
+    //Class CocktailTest_2 for Tests with different setup
     @Nested
     @DisplayName("Cocktail Test With Pina Colada Cocktail")
     class CocktailTest_2 {
 
         @BeforeEach
         void setup() {
-            Liquid whiteRum = new Liquid("White Rum", 0.06, 37.5);
-            Liquid pineappleJuice = new Liquid("Pineapple juice", 0.1, 0);
-            Liquid creamOfCoconut = new Liquid("Cream of Coconut", 0.04, 0);
-            Liquid whippedCream = new Liquid("Whipped cream", 0.02, 0);
+            Liquid whiteRum = new Liquid("White Rum", 0.06, 37.5, 11, 24);
+            Liquid pineappleJuice = new Liquid("Pineapple juice", 0.1, 0, 18, 2.4);
+            Liquid creamOfCoconut = new Liquid("Cream of Coconut", 0.04, 0, 8, 7);
+            Liquid whippedCream = new Liquid("Whipped cream", 0.02, 0, 4, 1.2);
 
-            cocktail = new Cocktail("Pina Colada", whiteRum, pineappleJuice, creamOfCoconut, whippedCream);
+            try {
+                cocktail = new Cocktail("Pina Colada",new SimpleDateFormat("dd-MM-YYYY").parse("12-12-2001"), "Franz", whiteRum, pineappleJuice, creamOfCoconut, whippedCream);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
         }
 
         @Test
@@ -82,7 +92,7 @@ public class CocktailTest {
         @Test
         @DisplayName("test addIngredient")
         public void testAddIngredient() {
-            Liquid water = new Liquid("Water", 1, 0);
+            Liquid water = new Liquid("Water", 1, 0, 20, 1);
             cocktail.addIngredient(water);
             assertTrue(cocktail.ingredients.contains(water));
         }
@@ -100,5 +110,29 @@ public class CocktailTest {
             //The System.lineSeparator() is because the line ending from System.out.println
             //can vary on diffrent settings and Systems
         }
+
+        @Test
+        @DisplayName("test getDate")
+        public void testGetDate() {
+            try {
+                assertEquals(new SimpleDateFormat("dd-MM-YYYY").parse("12-12-2001"), cocktail.getDate());
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+
+        @Test
+        @DisplayName("test getPrice")
+        public void testGetPrice() {
+            assertEquals(1.98, cocktail.getPrice());
+        }
+
+        @Test
+        @DisplayName("test getSellerName")
+        public void testGetSellerName() {
+            assertEquals("Franz", cocktail.getSellerName());
+        }
+
     }
 }
+

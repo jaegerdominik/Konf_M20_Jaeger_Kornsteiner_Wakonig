@@ -1,75 +1,455 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
 
-  <groupId>at.fhj.iit</groupId>
-  <artifactId>Konf_M20_Jaeger_Kornsteiner_Wakonig</artifactId>
-  <version>1.0-SNAPSHOT</version>
+<modelVersion>4.0.0</modelVersion>
 
-  <name>Konf_M20_Jaeger_Kornsteiner_Wakonig</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+<groupId>at.fhj.iit</groupId>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
-  </properties>
+<artifactId>Konf_M20_Jaeger_Kornsteiner_Wakonig</artifactId>
 
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+<version>3.0</version>
 
-  <build>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
-      <plugins>
-        <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
-        <plugin>
-          <artifactId>maven-clean-plugin</artifactId>
-          <version>3.1.0</version>
-        </plugin>
-        <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
-        <plugin>
-          <artifactId>maven-resources-plugin</artifactId>
-          <version>3.0.2</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.8.0</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.22.1</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-jar-plugin</artifactId>
-          <version>3.0.2</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-install-plugin</artifactId>
-          <version>2.5.2</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-deploy-plugin</artifactId>
-          <version>2.8.2</version>
-        </plugin>
-        <!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
-        <plugin>
-          <artifactId>maven-site-plugin</artifactId>
-          <version>3.7.1</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-project-info-reports-plugin</artifactId>
-          <version>3.0.0</version>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-  </build>
+<description>Drinks and cash register</description>
+
+<url>https://github.com/jaegerdominik/Konf_M20_Jaeger_Kornsteiner_Wakonig</url>
+
+<!-- developers information, will be used for documentation -->
+
+
+
+<developers>
+
+
+<developer>
+
+<id>jaegerdominik</id>
+
+<name>Dominik Jäger</name>
+
+<email>dominik.jaeger@edu.fh-joanneum.at</email>
+
+<organization>FH JOANNEUM GmbH</organization>
+
+<organizationUrl>https://www.fh-joanneum.at/iit</organizationUrl>
+
+
+<roles>
+
+<role>Student</role>
+
+</roles>
+
+<timezone>Europe/Vienna</timezone>
+
+</developer>
+
+<developer>
+
+<id>MrUseless-Dev</id>
+
+<name>Lion Kornsteiner</name>
+
+<email>lion.kornsteiner@edu.fh-joanneum.at</email>
+
+<organization>FH JOANNEUM GmbH</organization>
+
+<organizationUrl>https://www.fh-joanneum.at/iit</organizationUrl>
+
+<roles>
+
+<role>Student</role>
+
+</roles>
+
+<timezone>Europe/Vienna</timezone>
+
+</developer>
+
+<developer>
+
+<id>Gregooo</id>
+
+<name>Gregor Wakonig</name>
+
+<email>gregor.wakonig@edu.fh-joanneum.at</email>
+
+<organization>FH JOANNEUM GmbH</organization>
+
+<organizationUrl>https://www.fh-joanneum.at/iit</organizationUrl>
+
+
+<roles>
+
+<role>Student</role>
+
+</roles>
+
+<timezone>Europe/Vienna</timezone>
+
+</developer>
+
+</developers>
+
+<properties>
+
+<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+<maven.comiler.release>11</maven.comiler.release>
+
+<junit-platform.version>5.7.0-M1</junit-platform.version>
+
+</properties>
+
+<!-- build configuration -->
+
+
+
+<build>
+
+
+<plugins>
+
+<!-- build automation process -->
+
+
+
+<plugin>
+
+<groupId>org.apache.maven.plugins</groupId>
+
+<artifactId>maven-compiler-plugin</artifactId>
+
+<version>3.8.1</version>
+
+
+<configuration>
+
+<release>11</release>
+
+</configuration>
+
+</plugin>
+
+<!-- reporting -->
+
+
+
+<plugin>
+
+<groupId>org.apache.maven.plugins</groupId>
+
+<artifactId>maven-site-plugin</artifactId>
+
+<version>3.7.1</version>
+
+</plugin>
+
+<!-- will run unit tests -->
+
+
+<!-- currently throws some warnings -->
+
+
+
+<plugin>
+
+<groupId>org.apache.maven.plugins</groupId>
+
+<artifactId>maven-surefire-plugin</artifactId>
+
+<version>3.0.0-M5</version>
+
+</plugin>
+
+<!-- generate information about test coverage -->
+
+
+
+<plugin>
+
+<groupId>org.jacoco</groupId>
+
+<artifactId>jacoco-maven-plugin</artifactId>
+
+<version>0.8.6</version>
+
+
+<executions>
+
+
+<execution>
+
+<id>prepare-agent</id>
+
+
+<goals>
+
+<goal>prepare-agent</goal>
+
+</goals>
+
+</execution>
+
+
+<execution>
+
+<id>report</id>
+
+<phase>test</phase>
+
+
+<goals>
+
+<goal>report</goal>
+
+</goals>
+
+</execution>
+
+</executions>
+
+</plugin>
+
+<!-- using README.md for Maven Site Documentation -->
+
+
+
+<plugin>
+
+<groupId>org.apache.maven.plugins</groupId>
+
+<artifactId>maven-resources-plugin</artifactId>
+
+<version>2.6</version>
+
+
+<executions>
+
+
+<execution>
+
+<!-- Copy the readme file to the site source files so that a page is generated from it. -->
+
+
+<!-- https://stackoverflow.com/questions/13748659/how-to-include-github-markdown-files-into-maven-site -->
+
+
+<id>copy-readme</id>
+
+<phase>pre-site</phase>
+
+
+<goals>
+
+<goal>copy-resources</goal>
+
+</goals>
+
+
+<configuration>
+
+<outputDirectory>${basedir}/src/site/markdown</outputDirectory>
+
+
+<resources>
+
+
+<resource>
+
+<directory>${basedir}</directory>
+
+<includes>
+
+<include>README.md</include>
+
+</includes>
+
+</resource>
+
+</resources>
+
+</configuration>
+
+</execution>
+
+</executions>
+
+</plugin>
+
+</plugins>
+
+</build>
+
+
+<dependencies>
+
+<!-- JUnit 5 testing -->
+
+
+
+<dependency>
+
+<groupId>org.junit.jupiter</groupId>
+
+<artifactId>junit-jupiter</artifactId>
+
+<version>5.7.0-M1</version>
+
+<scope>test</scope>
+
+</dependency>
+
+
+<dependency>
+
+<groupId>org.junit.jupiter</groupId>
+
+<artifactId>junit-jupiter-api</artifactId>
+
+<version>5.7.0-M1</version>
+
+<scope>test</scope>
+
+</dependency>
+
+
+<dependency>
+
+<groupId>org.junit.jupiter</groupId>
+
+<artifactId>junit-jupiter-engine</artifactId>
+
+<version>5.7.0-M1</version>
+
+<scope>test</scope>
+
+</dependency>
+
+
+<dependency>
+
+<groupId>org.junit.jupiter</groupId>
+
+<artifactId>junit-jupiter-params</artifactId>
+
+<version>5.7.0-M1</version>
+
+<scope>test</scope>
+
+</dependency>
+
+</dependencies>
+
+
+<reporting>
+
+
+<plugins>
+
+<!-- maven site for documentation -->
+
+
+
+<plugin>
+
+<artifactId>maven-project-info-reports-plugin</artifactId>
+
+<version>3.0.0</version>
+
+</plugin>
+
+
+<plugin>
+
+<groupId>org.apache.maven.plugins</groupId>
+
+<artifactId>maven-site-plugin</artifactId>
+
+<version>3.7.1</version>
+
+</plugin>
+
+<!-- Java Doc within Maven Site Documentation-->
+
+
+
+<plugin>
+
+<groupId>org.apache.maven.plugins</groupId>
+
+<artifactId>maven-javadoc-plugin</artifactId>
+
+<version>3.2.0</version>
+
+
+<configuration>
+
+<!-- Disable JavaDoc warnings -->
+
+
+<additionalJOption>-Xdoclint:none</additionalJOption>
+
+</configuration>
+
+</plugin>
+
+<!-- Test Coverage from JaCoCo Plugin integration in Maven Site Documentation -->
+
+
+
+<plugin>
+
+<groupId>org.jacoco</groupId>
+
+<artifactId>jacoco-maven-plugin</artifactId>
+
+
+<configuration>
+
+<dataFile>${jacoco.execution.data.file}</dataFile>
+
+</configuration>
+
+
+<reportSets>
+
+
+<reportSet>
+
+
+<reports>
+
+<report>report</report>
+
+</reports>
+
+</reportSet>
+
+</reportSets>
+
+</plugin>
+
+</plugins>
+
+</reporting>
+
+<!-- define your current license, Care about sharing :) -->
+
+<licenses>
+
+<license>
+
+<name>GNU GPLv3 </name>
+
+<url>https://www.gnu.org/licenses/gpl-3.0.de.html</url>
+
+<distribution>repo</distribution>
+
+<comments>I care about sharing improvements.</comments>
+
+</license>
+
+</licenses>
+
 </project>

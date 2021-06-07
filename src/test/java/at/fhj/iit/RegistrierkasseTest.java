@@ -39,6 +39,9 @@ public class RegistrierkasseTest {
         beer = new Beer("Guinness 0.0", BeerType.STOUT_BEER, 0, 0.44f, date2, "Dominik", 2.15);
         hotDrink = new HotDrink("Hot Cocoa", date1,"Franz",milk, drambuie);
         registrierkasse = new Registrierkasse();
+        registrierkasse.addDrink(cocktail);
+        registrierkasse.addDrink(beer);
+        registrierkasse.addDrink(hotDrink);
     }
 
 
